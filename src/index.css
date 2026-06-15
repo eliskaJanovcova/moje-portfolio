@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+/* 1. GLOBÁLNÍ DESIGN TOKENS (Světlý režim jako výchozí) */
+@theme {
+  --color-brand-bg: #F8FAFC;        /* Light mode pozadí */
+  --color-brand-primary: #059669;   /* Light mode zelená */
+  --color-brand-secondary: #475569; /* Light mode šedá */
+  --color-brand-text: #0F172A;      /* Light mode text */
+}
+
+/* 2. MANUÁLNÍ PŘEPÍNAČ PRO TMAVÝ REŽIM POMOCÍ TŘÍDY .dark */
+.dark {
+  --color-brand-bg: #1C2541;        /* Dark mode pozadí – tvá hluboká modrá */
+  --color-brand-primary: #8CFF98;   /* Dark mode zelená – tvůj jasný neon */
+  --color-brand-secondary: #93A8AC; /* Dark mode šedá */
+  --color-brand-text: #FFFFFF;      /* Dark mode text – čistě bílá */
+}
