@@ -1,10 +1,10 @@
-import logo from '../assets/logo/SVG/white.svg'
+import logo from '../assets/logo/SVG/green.svg'
 
 function Navbar() {
     return (
         <nav className="w-full max-w-6xl mx-auto px-6 py-4 flex justify-between items-center text-white">
             <div className="flex items-center">
-                <img src={logo} alt="E.J. Logo" className="h-8 w-auto object-contain cursor-pointer" />
+                <img src={logo} alt="E.J. Logo" className="h-14 w-auto object-contain cursor-pointer" />
             </div>
 
             <div className="flex gap-6 font-medium">

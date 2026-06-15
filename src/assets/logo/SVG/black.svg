@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211.95 424">
-  <defs>
-    <style>
-      .cls-1 {
-        font-family: Silom, Silom;
-        font-size: 254.96px;
-      }
-    </style>
-  </defs>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171.72 265.67">
   <g id="Layer_1-2" data-name="Layer 1">
     <g>
-      <text class="cls-1" transform="translate(70.65 297.54) scale(.95 1)"><tspan x="0" y="0">J</tspan></text>
-      <text class="cls-1" transform="translate(0 223.09) scale(.95 1)"><tspan x="0" y="0">E</tspan></text>
+      <path d="M171.72,74.45v148.64c0,14.28-3.36,24.95-10.06,32-6.71,7.05-16.84,10.58-30.42,10.58h-40.23c-13.57,0-23.71-3.53-30.42-10.58-6.71-7.05-10.06-17.72-10.06-32v-42.32h40.48v42.32c0,5.95,1.98,11.01,5.94,15.17,3.96,4.17,8.68,6.25,14.18,6.25s10.22-2.08,14.18-6.25c3.96-4.16,5.94-9.22,5.94-15.17V74.45h40.48Z"/>
+      <path d="M0,191.22V0h101.07v21.16h-60.59v63.74h40.48v21.42h-40.48v63.74h60.59v21.16H0Z"/>
     </g>
   </g>
 </svg>
