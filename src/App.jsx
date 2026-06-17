@@ -7,6 +7,7 @@ function App() {
 
   // 💡 Stav i funkce musí žít UVNITŘ komponenty
       const [darkMode, setDarkMode] = useState(false);
+      const [activeTab, setActiveTab] = useState('about');
   
       const toggleDarkMode = () => {
           const nextMode = !darkMode;
@@ -25,7 +26,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-brand-bg text-brand-text flex flex-col justify-between px-4 transition-colors duration-300">
-      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Navbar darkMode={darkMode} 
+              toggleDarkMode={toggleDarkMode} 
+              activeTab={activeTab} 
+              setActiveTab={setActiveTab}
+              />
       <Hero />
       <div className="hidden md:block h-16"></div>
     </div>

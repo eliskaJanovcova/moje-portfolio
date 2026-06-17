@@ -1,24 +1,39 @@
 import logoLight from '../assets/logo/SVG/black.svg'
-
 import logoDark from '../assets/logo/SVG/green.svg'
 
-function Navbar({ darkMode, toggleDarkMode }) {
+function Navbar({ darkMode, toggleDarkMode, activeTab, setActiveTab }) {
 
     return (
         <nav className="w-full max-w-6xl mx-auto px-6 py-4 flex justify-between items-center text-brand-text">
             {/* LOGO */}
             <div className="flex items-center">
-                <img src={darkMode ? logoDark : logoLight} 
-        alt="E.J. Logo" 
-        className="h-14 w-auto object-contain cursor-pointer" />
+                <img src={darkMode ? logoDark : logoLight}
+                    alt="E.J. Logo"
+                    className="h-14 w-auto object-contain cursor-pointer" />
             </div>
 
             {/* ODKAZY A TLAČÍTKO */}
             <div className="flex items-center gap-6 font-medium">
-                <p className="hover:text-brand-primary transition-colors cursor-pointer text-brand-secondary">Projects</p>
-                <p className="text-brand-primary cursor-pointer">About</p>
-                <p className="hover:text-brand-primary transition-colors cursor-pointer text-brand-secondary">Contact</p>
+                <p
+                    onClick={() => setActiveTab('projects')}
+                    className={`transition-colors cursor-pointer ${activeTab === 'projects' ? 'text-brand-primary' : 'text-brand-secondary hover:text-brand-primary'}`}
+                >
+                    Projects
+                </p>
 
+                <p
+                    onClick={() => setActiveTab('about')}
+                    className={`transition-colors cursor-pointer ${activeTab === 'about' ? 'text-brand-primary' : 'text-brand-secondary hover:text-brand-primary'}`}
+                >
+                    About
+                </p>
+
+                <p
+                    onClick={() => setActiveTab('contact')}
+                    className={`transition-colors cursor-pointer ${activeTab === 'contact' ? 'text-brand-primary' : 'text-brand-secondary hover:text-brand-primary'}`}
+                >
+                    Contact
+                </p>
                 {/* ☀️/🌙 Přepínač, který jsme přidaly do menu */}
                 <button
                     onClick={toggleDarkMode}

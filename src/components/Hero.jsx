@@ -10,7 +10,7 @@ function Hero() {
                     ELIŠKA
                 </h1>
                 <p className="text-2xl md:text-3xl text-brand-secondary font-light mb-8">
-                    Designer
+                    UX/UI Designer a Frontend Developer.
                 </p>
                 <button className="border-2 border-brand-primary text-brand-primary px-6 py-3 rounded-lg hover:bg-brand-primary hover:text-brand-bg transition-all duration-300 font-medium cursor-pointer">
                     more
