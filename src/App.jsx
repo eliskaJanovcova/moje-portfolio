@@ -1,6 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 function App() {
@@ -24,9 +24,40 @@ function App() {
     }
   };
 
+  // 🔮 MAGICKÝ SCROLL-SPY: Sleduje, kde se uživatel zrovna nachází
+  useEffect(() => {
+    // Definujeme sekce, které chceme na stránce sledovat
+    const sectionIds = ['about', 'projects', 'contact'];
+
+    const observerOptions = {
+      root: null, // Sleduje se výřez celého okna prohlížeče
+      rootMargin: '-30% 0px -60% 0px', // Spustí se, když je sekce zhruba uprostřed obrazovky
+      threshold: 0 // Stačí, když se objeví kousíček sekce
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        // Pokud sekce vstoupila do našeho sledovaného výřezu, přepni aktivní záložku
+        if (entry.isIntersecting) {
+          setActiveTab(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Přikážeme observeru, aby začal hlídat všechny naše sekce podle jejich ID
+    sectionIds.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    // Rychlý úklid v paměti prohlížeče, když uživatel web zavře
+    return () => observer.disconnect();
+  }, []); // Prázdné pole znamená, že se toto sledování zapne pouze jednou při načtení webu
+
   return (
-    <div className="min-h-screen bg-brand-bg text-brand-text flex flex-col px-4 transition-colors duration-300">
-      {/* Navbar necháme nahoře, zítra z něj uděláme fixní lištu */}
+    <div className="min-h-screen bg-brand-bg text-brand-text flex flex-col px-4 transition-colors duration-300 scroll-smooth pt-24">      {/* Navbar necháme nahoře, zítra z něj uděláme fixní lištu */}
       <Navbar
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}
