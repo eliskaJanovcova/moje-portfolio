@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ProjectCard from './components/ProjectCard'
+import DarkModeToggle from './components/DarkModeToggle'
 import { useState, useEffect } from 'react'
 
 
@@ -75,15 +76,12 @@ function App() {
 
         {/* 2. SEKCE: PROJECTS – Výraznější linka s lehkým zářením v dark modu */}
 
-
-        
-
         <section
           id="projects"
           className="min-h-[90vh] flex flex-col items-center justify-center w-full max-w-6xl mx-auto px-6 py-24 text-center border-t border-card-border relative"
         >
-        <ProjectCard id="01" title="Redesign mobilní aplikace" description="Kompletní proces od výzkumení uživatelů až po pixel-perfect prototyp ve Figmě." />
-        <ProjectCard id="02" title=" redesign webové stránky" description="Modernizace a optimalizace uživatelského rozhraní pro e-commerce platformu." />
+          <ProjectCard id="01" title="Redesign mobilní aplikace" description="Kompletní proces od výzkumení uživatelů až po pixel-perfect prototyp ve Figmě." />
+          <ProjectCard id="02" title=" redesign webové stránky" description="Modernizace a optimalizace uživatelského rozhraní pro e-commerce platformu." />
 
         </section>
 
@@ -109,6 +107,9 @@ function App() {
           </a>
         </section>
       </main>
+
+      {/* 🔮 MODERNÍ PLOVOUCÍ GLASSMORPHIC TLAČÍTKO */}
+      <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
       {/* Distanční prvek na konec */}
       <div className="hidden md:block h-16"></div>

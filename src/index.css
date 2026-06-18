@@ -2,7 +2,7 @@
 
 /* ☀️ SVĚTLÝ REŽIM (Výchozí nastavení webu) */
 @theme {
-  --color-brand-bg: #F8FAFC;        /* Light mode pozadí stránky */
+  --color-brand-bg: #ECEEEF;        /* Light mode pozadí stránky */
   --color-brand-primary: #4BCC59;   /* Light mode zelená */
   --color-brand-secondary: #475569; /* Light mode šedý text */
   --color-brand-text: #0F172A;      /* Light mode tmavý text */
