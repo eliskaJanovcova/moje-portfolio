@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import ProjectCard from './components/ProjectCard'
 import { useState, useEffect } from 'react'
 
 
@@ -73,26 +74,16 @@ function App() {
         </section>
 
         {/* 2. SEKCE: PROJECTS – Výraznější linka s lehkým zářením v dark modu */}
+
+
+        
+
         <section
           id="projects"
           className="min-h-[90vh] flex flex-col items-center justify-center w-full max-w-6xl mx-auto px-6 py-24 text-center border-t border-card-border relative"
         >
-          {/* Sémantický kód na pozadí sekce */}
-          <div className="absolute top-8 left-6 text-xs font-mono text-brand-secondary/60 tracking-widest">
-    // 01. SELECTED_WORKS
-          </div>
-
-          <h2 className="text-4xl font-bold mb-4 tracking-tight text-brand-text">Moje Případové Studie</h2>
-          <p className="text-brand-secondary max-w-md mx-auto text-sm">Tady brzy vyroste přehled mých UX/UI projektů.</p>
-
-          <div className="mt-12 p-8 bg-card-bg border border-card-border rounded-xl cursor-pointer hover:border-brand-primary transition-all duration-300 w-full max-w-2xl text-left hover:scale-[1.01] shadow-sm dark:shadow-[0_10px_30px_rgba(0,0,0,0.2)] group">
-            <p className="text-xs text-brand-primary font-mono mb-2 tracking-wider">CASE STUDY #01</p>
-            <h3 className="text-xl font-bold text-brand-text group-hover:text-brand-primary transition-colors">Redesign mobilní aplikace</h3>
-            <p className="text-sm text-brand-secondary mt-2">Kompletní proces od výzkumení uživatelů až po pixel-perfect prototyp ve Figmě.</p>
-            <p className="text-xs text-brand-primary mt-6 font-medium flex items-center gap-1 transition-transform">
-              Zjistit více <span className="text-xs">→</span>
-            </p>
-          </div>
+        <ProjectCard id="01" title="Redesign mobilní aplikace" description="Kompletní proces od výzkumení uživatelů až po pixel-perfect prototyp ve Figmě." />
+        <ProjectCard id="02" title=" redesign webové stránky" description="Modernizace a optimalizace uživatelského rozhraní pro e-commerce platformu." />
 
         </section>
 
