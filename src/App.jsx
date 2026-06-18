@@ -4,7 +4,6 @@ import ProjectCard from './components/ProjectCard'
 import DarkModeToggle from './components/DarkModeToggle'
 import { useState, useEffect } from 'react'
 
-
 function App() {
 
   // 💡 Stav i funkce musí žít UVNITŘ komponenty

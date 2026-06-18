@@ -2,24 +2,36 @@
 
 /* ☀️ SVĚTLÝ REŽIM (Výchozí nastavení webu) */
 @theme {
-  --color-brand-bg: #ECEEEF;        /* Light mode pozadí stránky */
-  --color-brand-primary: #4BCC59;   /* Light mode zelená */
-  --color-brand-secondary: #475569; /* Light mode šedý text */
-  --color-brand-text: #0F172A;      /* Light mode tmavý text */
+    --color-brand-bg: #ECEEEF;
+    /* Light mode pozadí stránky */
+    --color-brand-primary: #4BCC59;
+    /* Light mode zelená */
+    --color-brand-secondary: #475569;
+    /* Light mode šedý text */
+    --color-brand-text: #0F172A;
+    /* Light mode tmavý text */
 
-  /* Sémantické proměnné pro kartu projektu */
-  --color-card-bg: #FFFFFF;         /* V light modu čistě bílá karta */
-  --color-card-border: #E2E8F0;     /* Jemný šedý okraj (slate-200) */
+    /* Sémantické proměnné pro kartu projektu */
+    --color-card-bg: #FFFFFF;
+    /* V light modu čistě bílá karta */
+    --color-card-border: #E2E8F0;
+    /* Jemný šedý okraj (slate-200) */
 }
 
 /* 🌙 TMAVÝ REŽIM (Aktivuje se při přidání třídy .dark) */
 .dark {
-  --color-brand-bg: #1C2541;        /* Tvá hluboká modrá na pozadí stránky */
-  --color-brand-primary: #8CFF98;   /* Tvůj jasný neon */
-  --color-brand-secondary: #93A8AC; /* Dark mode šedý text */
-  --color-brand-text: #FFFFFF;      /* Dark mode čistě bílý text */
+    --color-brand-bg: #0F172A;
+    /* Tvá hluboká modrá na pozadí stránky */
+    --color-brand-primary: #8CFF98;
+    /* Tvůj jasný neon */
+    --color-brand-secondary: #93A8AC;
+    /* Dark mode šedý text */
+    --color-brand-text: #ECEEEF;
+    /* Dark mode čistě bílý text */
 
-  /* 💎 TADY SE DĚJE TA MAGIE PRO KARTU V DARK MODU */
-  --color-card-bg: #253156;         /* Decentně světlejší modrá pro podklad karty */
-  --color-card-border: rgba(255, 255, 255, 0.1); /* Luxusní jemná bílá linka */
+    /* 💎 TADY SE DĚJE TA MAGIE PRO KARTU V DARK MODU */
+    --color-card-bg: #253156;
+    /* Decentně světlejší modrá pro podklad karty */
+    --color-card-border: rgba(255, 255, 255, 0.1);
+    /* Luxusní jemná bílá linka */
 }

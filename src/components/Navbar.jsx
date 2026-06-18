@@ -13,7 +13,7 @@ function Navbar({ darkMode, toggleDarkMode, activeTab, setActiveTab }) {
 
             {/* ODKAZY A TLAČÍTKO */}
             <div className="flex items-center gap-6 font-medium">
-                
+
                 <a
                     href="#about"
                     onClick={() => setActiveTab('about')}
