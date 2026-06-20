@@ -1,4 +1,27 @@
+import { useState } from 'react';
+
 function Contact() {
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Sem zítra napojíme API pro reálné odesílání
+        console.log('Data z formuláře připravená k odeslání:', formData);
+        alert('Zpráva byla úspěšně odeslána! (Zatím jen do konzole)');
+    };
 
     return (
         <section
@@ -14,11 +37,70 @@ function Contact() {
                 Máš zájem o spolupráci nebo chceš jen pokecat o designu? Moje schránka je otevřená.
             </p>
 
-            <a
-                href="mailto:eliska@email.cz"
-                className="border border-brand-primary/50 text-brand-primary bg-brand-primary/5 px-8 py-4 rounded-lg hover:bg-brand-primary hover:text-brand-bg transition-all duration-300 font-medium tracking-wide shadow-[0_0_15px_rgba(140,255,152,0.1)] dark:shadow-[0_0_25px_rgba(140,255,152,0.15)]"
+            <form
+                onSubmit={handleSubmit}
+                className="w-full max-w-md mx-auto flex flex-col gap-5 text-left mb-12"
             >
-                eliska@email.cz
+                {/* Pole pro Jméno */}
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="name" className="text-xs font-mono text-brand-secondary tracking-wide uppercase">Jméno</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-card-border bg-card-bg text-brand-text focus:outline-none focus:border-brand-primary transition-colors duration-200 text-sm"
+                        placeholder="Jan Novák"
+                    />
+                </div>
+
+                {/* Pole pro E-mail */}
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="email" className="text-xs font-mono text-brand-secondary tracking-wide uppercase">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-card-border bg-card-bg text-brand-text focus:outline-none focus:border-brand-primary transition-colors duration-200 text-sm"
+                        placeholder="jan.novak@example.com"
+                    />
+                </div>
+
+                {/* Pole pro Zprávu */}
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="message" className="text-xs font-mono text-brand-secondary tracking-wide uppercase">Zpráva</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                        rows="4"
+                        value={formData.message}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-card-border bg-card-bg text-brand-text focus:outline-none focus:border-brand-primary transition-colors duration-200 text-sm resize-none"
+                        placeholder="Tvůj text..."
+                    />
+                </div>
+
+                {/* Odesílací tlačítko */}
+                <button
+                    type="submit"
+                    className="mt-2 w-full border border-brand-primary text-brand-primary bg-brand-primary/5 px-6 py-3.5 rounded-lg hover:bg-brand-primary hover:text-brand-bg transition-all duration-300 font-medium tracking-wide shadow-[0_0_15px_rgba(140,255,152,0.1)] dark:shadow-[0_0_25px_rgba(140,255,152,0.15)] cursor-pointer text-center"
+                >
+                    Odeslat zprávu
+                </button>
+            </form>
+
+            {/* Záložní přímý e-mail */}
+            <a
+                href="mailto:elissx99@gmail.com"
+                className="text-xs font-mono text-brand-secondary hover:text-brand-primary transition-colors duration-200"
+            >
+                nebo napřímo na: elissx99@gmail.com
             </a>
         </section>
     )
