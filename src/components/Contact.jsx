@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react'; // 🌟 OPRAVA: Přidán chybějící import Reactu
 
 function Contact() {
-
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -16,11 +15,32 @@ function Contact() {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Sem zítra napojíme API pro reálné odesílání
-        console.log('Data z formuláře připravená k odeslání:', formData);
-        alert('Zpráva byla úspěšně odeslána! (Zatím jen do konzole)');
+
+        // 🚀 Tvůj přesný endpoint z Formspree
+        const formspreeEndpoint = "https://formspree.io/f/maqgwnzo";
+
+        try {
+            const response = await fetch(formspreeEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                alert('Díky! Zpráva byla úspěšně odeslána na můj e-mail.');
+                setFormData({ name: '', email: '', message: '' });
+            } else {
+                alert('Och, něco se pokazilo. Zkus to prosím znovu.');
+            }
+        } catch (error) {
+            console.error('Chyba při komunikaci s API:', error);
+            alert('Chyba sítě. Zkontroluj připojení k internetu.');
+        }
     };
 
     return (
@@ -29,7 +49,7 @@ function Contact() {
             className="min-h-[85vh] flex flex-col items-center justify-center w-full max-w-6xl mx-auto px-6 py-24 text-center border-t border-slate-700/40 dark:border-brand-primary/20 relative"
         >
             <div className="absolute top-8 left-6 text-xs font-mono text-brand-secondary/70 dark:text-brand-primary/50 tracking-widest">
-      // 02. CONNECT
+                // 02. CONNECT
             </div>
 
             <h2 className="text-4xl font-bold mb-4 tracking-tight">Napiš mi</h2>
@@ -103,7 +123,7 @@ function Contact() {
                 nebo napřímo na: elissx99@gmail.com
             </a>
         </section>
-    )
+    );
 }
 
-export default Contact
+export default Contact;
