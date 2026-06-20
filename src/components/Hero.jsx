@@ -1,4 +1,4 @@
-import photo from '../assets/autoportrait/me2.png'
+import photo from '../assets/autoportrait/me4.png'
 
 function Hero() {
     return (
