@@ -1,6 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import ProjectCard from './components/ProjectCard'
+import Projects from './components/Projects'
 import DarkModeToggle from './components/DarkModeToggle'
 import { useState, useEffect } from 'react'
 
@@ -67,44 +67,18 @@ function App() {
       />
 
       {/* 🛠️ Nová One-Page struktura: Všechny sekce jsou pod sebou a mají své ID */}
-      <main className="flex-grow">
+      <main className="grow">
         {/* 1. SEKCE: HERO / ABOUT */}
         <section id="about" className="min-h-[90vh] flex items-center justify-center py-12">
           <Hero />
         </section>
 
         {/* 2. SEKCE: PROJECTS – Výraznější linka s lehkým zářením v dark modu */}
-
-        <section
-          id="projects"
-          className="min-h-[90vh] flex flex-col items-center justify-center w-full max-w-6xl mx-auto px-6 py-24 text-center border-t border-card-border relative"
-        >
-          <ProjectCard id="01" title="Redesign mobilní aplikace" description="Kompletní proces od výzkumení uživatelů až po pixel-perfect prototyp ve Figmě." />
-          <ProjectCard id="02" title=" redesign webové stránky" description="Modernizace a optimalizace uživatelského rozhraní pro e-commerce platformu." />
-
-        </section>
+        <Projects/>
 
         {/* 3. SEKCE: CONTACT – Kontrastnější linka a akcentované tlačítko */}
-        <section
-          id="contact"
-          className="min-h-[85vh] flex flex-col items-center justify-center w-full max-w-6xl mx-auto px-6 py-24 text-center border-t border-slate-700/40 dark:border-brand-primary/20 relative"
-        >
-          <div className="absolute top-8 left-6 text-xs font-mono text-brand-secondary/70 dark:text-brand-primary/50 tracking-widest">
-      // 02. CONNECT
-          </div>
-
-          <h2 className="text-4xl font-bold mb-4 tracking-tight">Napiš mi</h2>
-          <p className="text-brand-secondary max-w-md mx-auto text-sm mb-8">
-            Máš zájem o spolupráci nebo chceš jen pokecat o designu? Moje schránka je otevřená.
-          </p>
-
-          <a
-            href="mailto:eliska@email.cz"
-            className="border border-brand-primary/50 text-brand-primary bg-brand-primary/5 px-8 py-4 rounded-lg hover:bg-brand-primary hover:text-brand-bg transition-all duration-300 font-medium tracking-wide shadow-[0_0_15px_rgba(140,255,152,0.1)] dark:shadow-[0_0_25px_rgba(140,255,152,0.15)]"
-          >
-            eliska@email.cz
-          </a>
-        </section>
+        
+        
       </main>
 
       {/* 🔮 MODERNÍ PLOVOUCÍ GLASSMORPHIC TLAČÍTKO */}
