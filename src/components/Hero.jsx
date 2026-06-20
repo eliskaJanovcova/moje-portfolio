@@ -2,8 +2,7 @@ import photo from '../assets/autoportrait/me4.png'
 
 function Hero() {
     return (
-        <section className="w-full max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-12 text-[#FFFFFF]">
-
+        <section id="about" className="min-h-[90vh] flex items-center justify-center py-12">
             {/* LEVÁ STRANA: Texty a Tlačítko */}
             <div className="flex flex-col items-center md:items-start text-center md:text-left">
                 <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-2 text-brand-text">

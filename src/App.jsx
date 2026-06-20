@@ -70,16 +70,14 @@ function App() {
       {/* 🛠️ Nová One-Page struktura: Všechny sekce jsou pod sebou a mají své ID */}
       <main className="grow">
         {/* 1. SEKCE: HERO / ABOUT */}
-        <section id="about" className="min-h-[90vh] flex items-center justify-center py-12">
-          <Hero />
-        </section>
+        <Hero />
 
         {/* 2. SEKCE: PROJECTS – Výraznější linka s lehkým zářením v dark modu */}
-        <Projects/>
+        <Projects />
 
         {/* 3. SEKCE: CONTACT – Kontrastnější linka a akcentované tlačítko */}
-        <Contact/>
-        
+        <Contact />
+
       </main>
 
       {/* 🔮 MODERNÍ PLOVOUCÍ GLASSMORPHIC TLAČÍTKO */}
