@@ -49,7 +49,7 @@ function Contact() {
             className="min-h-[85vh] flex flex-col items-center justify-center w-full max-w-6xl mx-auto px-6 py-24 text-center border-t border-slate-700/40 dark:border-brand-primary/20 relative"
         >
             <div className="absolute top-8 left-6 text-xs font-mono text-brand-secondary/70 dark:text-brand-primary/50 tracking-widest">
-                // 02. CONNECT
+                // 03. CONNECT
             </div>
 
             <h2 className="text-4xl font-bold mb-4 tracking-tight">Napiš mi</h2>

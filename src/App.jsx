@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import Skills from './components/Skills'
 import DarkModeToggle from './components/DarkModeToggle'
 import { useState, useEffect } from 'react'
 
@@ -29,7 +30,7 @@ function App() {
   // 🔮 MAGICKÝ SCROLL-SPY: Sleduje, kde se uživatel zrovna nachází
   useEffect(() => {
     // Definujeme sekce, které chceme na stránce sledovat
-    const sectionIds = ['about', 'projects', 'contact'];
+    const sectionIds = ['about', 'projects', 'skills', 'contact'];
 
     const observerOptions = {
       root: null, // Sleduje se výřez celého okna prohlížeče
@@ -75,8 +76,13 @@ function App() {
         {/* 2. SEKCE: PROJECTS – Výraznější linka s lehkým zářením v dark modu */}
         <Projects />
 
-        {/* 3. SEKCE: CONTACT – Kontrastnější linka a akcentované tlačítko */}
+        {/* 3. SEKCE: SKILLS – Mřížka s nástroji a ikonami */}
+        <Skills />
+
+        {/* 4. SEKCE: CONTACT – Kontrastnější linka a akcentované tlačítko */}
         <Contact />
+
+        
 
       </main>
 

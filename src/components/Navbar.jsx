@@ -30,6 +30,14 @@ function Navbar({ darkMode, toggleDarkMode, activeTab, setActiveTab }) {
                     Projects
                 </a>
 
+                <a
+                    href="#skills"
+                    onClick={() => setActiveTab('skills')}
+                    className={`transition-colors cursor-pointer ${activeTab === 'skills' ? 'text-brand-primary' : 'text-brand-secondary hover:text-brand-primary'}`}
+                >
+                    Skills
+                </a>
+
 
                 <a
                     href="#contact"
